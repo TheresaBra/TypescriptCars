@@ -1,0 +1,22 @@
+.container {
+   display: flex;
+   justify-content: center;
+   min-width: 100vh;
+   min-height:100vh;
+   margin-top: 20px;
+   padding-top: 20px;
+   background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(bus.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+
+.wheel {
+
+   min-height: 50px;
+ }
+
+ .hide {
+   display: none;
+
+ }

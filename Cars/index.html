@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    
+<script src="../models/car.js"></script>
+<script src="../models/wheel.js"></script>
+<script src="../controllers/controller.js"></script>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!-- Custom CSS -->
+<link rel="stylesheet" type="text/css" href="styles.css">
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="container" id="car"> 
+        <div class="col">
+            <div class="jumbotron_createCar">
+                <div class="mx-auto">
+                    <div class="row d-block">
+                        <div class="col">
+                            <h4>Your Car</h4>
+                        </div>
+                    </br>
+                        <div class="col">
+                            <form method="POST" action="index.html" id="form_car" name="mynewCar">
+                                <div class="form-row">
+                                    <div class="form-group col-sm-4">
+                                        <label for="plate">Plate</label>
+                                        <input type="text"  name="plate" class="form-control" id="plate" placeholder="e.g. B6776DE" value="1234DSF">
+                                    </div>
+                                    <div class="form-group col-sm-4">
+                                        <label for="brand">Brand</label>
+                                        <input type="text" name="brand" class="form-control"
+                                            id="brand" placeholder="e.g. Volkswagen" value="Audi">
+                                    </div>
+                                    <div class="form-group col-sm-4">
+                                        <label for="color">Color</label>
+                                        <input type="text" name="color" class="form-control"
+                                            id="color" placeholder="e.g. mintgreen" value="balu">
+                                    </div>
+                                </div>
+                                
+                                <button type="button" class="btn btn-outline-dark btn-md" onclick="createCar()">Create car</button>
+                            </br>
+                            </br>
+                                <h6>Car Info</h6>
+                                <div class="form-row">
+                                    <div class="form-group col-sm-4">
+                                        <output type="text" name="plateInfo" id="plateInfo" value="" class= "form-control">
+                                    </div>
+                                    <div class="form-group col-sm-4">
+                                        <output type="text" name=" brandInfo" id="brandInfo" value="" class= "form-control">
+                                    </div>
+                                    <div class="form-group col-sm-4">
+                                        <output type="text" name="colorInfo" id="colorInfo" value="" class= "form-control">
+                                    </div>
+                                </div>
+                            </br>
+                                <button type="button" class="btn btn-outline-dark btn-md" onclick="showFormWheel()">Insert wheel info</button>
+                            </form>
+                            
+                        </div>
+                        <div class="col">
+                            <form method="POST" action="index.html" id="wheel" name="wheels" >
+                                <div class="form-row">
+                                    <div class="form-group col">
+                                        <label for="wheel1"> Wheel brand</label>
+                                        <div class="form-row" id=wheelBrand>
+                                            <div class="form col">
+                                                <input type="text"  name="wheelBrand" class="form-control" id="wheelBrand1" placeholder="Brand" value="A">
+                                            </div>
+                                            <div class="form col">
+                                                <input type="text"  name="wheelBrand" class="form-control" id="wheelBrand2" placeholder="Brand" value="B">
+                                            </div>
+                                            <div class="form col">
+                                                <input type="text"  name="wheelBrand" class="form-control" id="wheelBrand3" placeholder="Brand" value="C">
+                                            </div>
+                                            <div class="form col">
+                                                <input type="text"  name="wheelBrand" class="form-control" id="wheelBrand4" placeholder="Brand" value="D">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col">
+                                        <label for="wheel1"> Diameters</label>
+                                        <div class="form-row"  id=diameter>
+                                            <div class="form col">
+                                                <input type="text"  name="diameter" class="form-control" id="diameter1" placeholder="Diameter" value="1">
+                                            </div>
+                                            <div class="form col">
+                                                <input type="text"  name="diameter" class="form-control" id="diameter2" placeholder="Diameter" value="1">
+                                            </div>
+                                            <div class="form col">
+                                                <input type="text"  name="diameter" class="form-control" id="diameter3" placeholder="Diameter" value="1">
+                                            </div>
+                                            <div class="form col">
+                                                <input type="text"  name="diameter" class="form-control" id="diameter4" placeholder="Diameter" value="1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-outline-dark btn-md" onclick="addWheels()">Add wheels</button>
+                            </br>
+                            </br>
+                                <h6>Wheel Info</h6>
+                                <div class="form-row">
+                                    <div class="form-group col">
+                                        <output type="text" name="wheelInfo" id="wheelInfo" value="" class= "wheel form-control">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
